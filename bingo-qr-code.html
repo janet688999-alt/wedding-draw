@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>振明 & 珮君｜Wedding Bingo QR Code</title>
+<style>
+body{font-family:system-ui,"Noto Sans TC",sans-serif;text-align:center;color:#315b78;margin:24px}
+main{max-width:520px;margin:auto;border:1px solid #d5e5ef;border-radius:20px;padding:24px}
+#qr{display:flex;justify-content:center;margin:24px auto}
+button{background:#315b78;color:#fff;border:0;border-radius:10px;padding:12px 20px;font:inherit}
+@media print{button,.hint{display:none}main{border:0}}
+</style></head><body><main>
+<h1>振明 & 珮君</h1><h2>Wedding Bingo</h2>
+<p>掃描下方 QR Code，即可自動領取你的專屬 Bingo 卡。</p>
+<div id="qr"></div><p id="url" class="hint"></p>
+<button onclick="window.print()">列印 QR Code</button>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const BINGO_URL = "https://janet688999-alt.github.io/wedding-draw/bingo.html";
+document.getElementById("url").textContent = BINGO_URL;
+new QRCode(document.getElementById("qr"),{text:BINGO_URL,width:260,height:260,colorDark:"#315b78",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});
+</script></body></html>
